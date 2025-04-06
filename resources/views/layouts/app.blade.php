@@ -9,7 +9,6 @@
     @vite('resources/js/app.js')
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-
 </head>
 
 <body class="bg-blue-100">
