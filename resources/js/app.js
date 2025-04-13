@@ -9,5 +9,9 @@ const dropzone = new Dropzone('#dropzone', {
   dictRemoveFile: 'Eliminar archivo',
   maxFiles: 1,
   uploadMultiple: false,
-  maxFilesize: 3, // MB
+  maxFilesize: 3, // MB 
+});
+
+dropzone.on('sending', function (file, xhr, fomData) {
+  console.log(file);
 });
