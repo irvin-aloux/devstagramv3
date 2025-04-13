@@ -15,7 +15,7 @@ class ImagenController extends Controller
 
         $imagen = $request->file('file');
         $nombreImagen = Str::uuid() . "." . $imagen->extension();
-        $imagenPath = public_path('uploads') . '/' . $nombreImagen;
+
         $imagen->move(public_path('uploads'), $nombreImagen);
 
         return response()->json(['imagen' => $nombreImagen]);
